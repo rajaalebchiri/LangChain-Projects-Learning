@@ -57,17 +57,17 @@ export function NavigationMenuComponent() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>examples</NavigationMenuTrigger>
+          <NavigationMenuTrigger>Guides</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <ListItem href="/" title="Simple App">
                 AI Study Buddy
               </ListItem>
               <ListItem
-                href="/docs/installation"
-                title="Structured data sample"
+                href="/resume-data-extractor"
+                title="Return Structured Data"
               >
-                Product Review Analyzer
+                Resume Data Extractor
               </ListItem>
               <ListItem href="/docs/primitives/typography" title="Typography">
                 Styles for headings, paragraphs, lists...etc
