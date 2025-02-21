@@ -58,7 +58,7 @@ export function NavigationMenuComponent() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Guides</NavigationMenuTrigger>
-          <NavigationMenuContent>
+          <NavigationMenuContent className="">
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <ListItem href="/" title="Simple App">
                 AI Study Buddy
@@ -113,7 +113,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none bg-white transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
