@@ -69,8 +69,11 @@ export function NavigationMenuComponent() {
               >
                 Resume Data Extractor
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
+              <ListItem
+                href="/docs/primitives/typography"
+                title="Code Generation and Execution"
+              >
+                Generate Code and execute it using external tool
               </ListItem>
             </ul>
           </NavigationMenuContent>
