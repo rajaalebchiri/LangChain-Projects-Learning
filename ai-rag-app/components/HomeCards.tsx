@@ -21,10 +21,9 @@ export const projects = [
     link: "/resume-data-extractor",
   },
   {
-    title: "Google",
-    description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+    title: "Code Generation and Execution",
+    description: "Generate Code and execute it using external tool",
+    link: "/code-generation-execution",
   },
   {
     title: "Meta",

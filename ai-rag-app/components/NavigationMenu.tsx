@@ -57,47 +57,9 @@ export function NavigationMenuComponent() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Guides</NavigationMenuTrigger>
-          <NavigationMenuContent className="">
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <ListItem href="/" title="Simple App">
-                AI Study Buddy
-              </ListItem>
-              <ListItem
-                href="/resume-data-extractor"
-                title="Return Structured Data"
-              >
-                Resume Data Extractor
-              </ListItem>
-              <ListItem
-                href="/docs/primitives/typography"
-                title="Code Generation and Execution"
-              >
-                Generate Code and execute it using external tool
-              </ListItem>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
+              Projects
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
