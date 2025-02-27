@@ -26,10 +26,10 @@ export const projects = [
     link: "/code-generation-execution",
   },
   {
-    title: "Meta",
+    title: "Other Concepts",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "Testing Multiple Concepts with tiny features",
+    link: "/other-concepts",
   },
   {
     title: "Amazon",
