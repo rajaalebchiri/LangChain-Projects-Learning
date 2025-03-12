@@ -27,15 +27,14 @@ export const projects = [
   },
   {
     title: "Other Concepts",
-    description:
-      "Testing Multiple Concepts with tiny features",
+    description: "Testing Multiple Concepts with tiny features",
     link: "/other-concepts",
   },
   {
-    title: "Amazon",
+    title: "AI-Powered Resume Matcher",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+      "A tool that helps job seekers match their resumes to job descriptions using semantic search.",
+    link: "/ai-resume-matcher",
   },
   {
     title: "Microsoft",

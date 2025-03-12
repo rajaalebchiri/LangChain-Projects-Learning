@@ -49,7 +49,7 @@ const ToolCalling = () => {
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-2xl font-semibold text-blue-900">
-        Learning Tool Call
+        Tool Calling
       </h1>
       <p>
         Building a small tool and integrating it with AI to extract information

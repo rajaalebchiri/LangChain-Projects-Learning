@@ -40,6 +40,30 @@ work with multiple types of data: text, images, audio, and video
   - withStructuredOutput: A wrapper around the invoke method for models that natively support structured output.
 ---
 
+#### Embedding Models
+
+- Embedding models: Input text, output numerical vectors representing semantic meaning.
+
+- Application: Enables semantic search by comparing these vectors, not just keywords.
+
+- langchain allows us to embed doucments or embed queries
+
+- Measuring similarity: we use similarity metrics two measure how to two texts are similar after converting them into numerical vectors
+
+- common metrics:
+
+  - Cosine Similarity: Measures the cosine of the angle between two vectors.
+  - Euclidean Distance: Measures the straight-line distance between two points.
+  - Dot Product: Measures the projection of one vector onto another.
+
+- **Vector stores** are frequently used to search over unstructured data, such as text, images, and audio, to retrieve relevant information based on semantic similarity rather than exact keyword matches.
+
+![alt text](image.png)
+
+- we split text in langchain for better performance and for token limit
+
+
+
 ## AI-Powered Personalized Learning Assistant
 
 Building AI RAG Application with LangChain & Next.js
@@ -121,3 +145,9 @@ This feature extracts structured data from uploaded resume PDFs.
 <div align="center">
   <img src="demo/resume_demo_3.png" width="800" alt="Workflow Diagram"/>
 </div>
+
+
+## Streaming
+
+LangChain's streaming concept enhances user experience by progressively displaying outputs from large language models (LLMs) as they are generated. Instead of waiting for a complete response, users can see intermediate results in real-time, reducing perceived latency and improving responsiveness
+
