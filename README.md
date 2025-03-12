@@ -6,6 +6,9 @@ Building LLM APP with js and openai
 
 projects are under ai-rag-app
 
+![alt text](demo/preview.png)
+
+
 ---
 
 ## langchain concepts
@@ -58,7 +61,7 @@ work with multiple types of data: text, images, audio, and video
 
 - **Vector stores** are frequently used to search over unstructured data, such as text, images, and audio, to retrieve relevant information based on semantic similarity rather than exact keyword matches.
 
-![alt text](image.png)
+![alt text](demo/image.png)
 
 - we split text in langchain for better performance and for token limit
 

@@ -36,10 +36,10 @@ export const projects = [
       "A tool that helps job seekers match their resumes to job descriptions using semantic search.",
     link: "/ai-resume-matcher",
   },
-  {
-    title: "Microsoft",
-    description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
-  },
+  // {
+  //   title: "Microsoft",
+  //   description:
+  //     "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+  //   link: "https://microsoft.com",
+  // },
 ];
