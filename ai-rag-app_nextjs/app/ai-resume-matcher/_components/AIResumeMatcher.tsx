@@ -1,7 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileUpload } from "@/components/ui/file-upload";
 import { Label } from "@/components/ui/label";
+import { Progress } from "@/components/ui/progress";
 import { Textarea } from "@/components/ui/textarea";
 import React, { useState } from "react";
 
@@ -9,6 +11,11 @@ const AIResumeMatcher = () => {
   const [files, setFiles] = useState<File[]>([]);
   const [jobDesc, setJobDesc] = useState<string>("");
   const [loading, setLoading] = useState(false);
+  const [overallScore, setOverallScore] = useState<number | null>(null);
+  const [keywords, setKeywords] = useState<string[]>([]);
+  const [scores, setScores] = useState<
+    { pageContent: string; matchPercentage: number }[]
+  >([]);
   const [step, setStep] = useState<number>(0);
   const handleFileUpload = async (files: File[]) => {
     setFiles(files);
@@ -18,7 +25,6 @@ const AIResumeMatcher = () => {
     if (step === 0) {
       setStep(1);
     } else {
-      console.log(jobDesc);
       sendRequest();
     }
   };
@@ -28,7 +34,6 @@ const AIResumeMatcher = () => {
       console.log("No files selected");
       return;
     }
-
 
     const formData = new FormData();
     files.forEach((file) => formData.append("file", file));
@@ -43,6 +48,10 @@ const AIResumeMatcher = () => {
 
       const data = await response.json();
       console.log(data);
+      // Update state with the new data
+      setScores(data.scores || []);
+      setOverallScore(data.overallScore || 0);
+      setKeywords(data.keywords || []);
     } catch (error) {
       console.log("Upload error:", error);
     } finally {
@@ -81,6 +90,51 @@ const AIResumeMatcher = () => {
           <Button disabled={loading} onClick={nextStep}>
             {loading ? "Loading..." : step === 0 ? "Next" : "Submit"}
           </Button>
+        )}
+        {/* Display Overall Score */}
+        {overallScore !== null && (
+          <div className="mt-6">
+            <h2 className="text-2xl font-bold">Overall Match Score</h2>
+            <Progress value={overallScore} className="mt-2" />
+            <p className="text-gray-700 mt-1">{overallScore}%</p>
+          </div>
+        )}
+        {/* Display Extracted Keywords */}
+        {keywords.length > 0 && (
+          <div className="mt-6">
+            <h2 className="text-xl font-bold">Important and repeated Keywords</h2>
+            <div className="flex flex-wrap gap-2 mt-2">
+              {keywords.map((word, index) => (
+                <span
+                  key={index}
+                  className="bg-gray-200 px-3 py-1 rounded-md text-sm"
+                >
+                  {word}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+        {/* Display Individual Scores */}
+        {scores.length > 0 && (
+          <div className="mt-6 space-y-4">
+            <h2 className="text-xl font-bold">Matching Details</h2>
+            {scores.map((score, index) => (
+              <Card key={index} className="border border-gray-200 shadow-md">
+                <CardHeader>
+                  <CardTitle className="text-lg font-semibold">
+                    Match:{" "}
+                    <span className="text-green-600">
+                      {score.matchPercentage}%
+                    </span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700">{score.pageContent}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         )}
       </div>
     </div>
