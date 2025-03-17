@@ -379,6 +379,14 @@
     zod "^3.22.4"
     zod-to-json-schema "^3.22.3"
 
+"@langchain/pinecone@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@langchain/pinecone/-/pinecone-0.2.0.tgz#2d944b7fb48d36b71e6d232098b931bf4ffae7cf"
+  integrity sha512-O3tWSCIbm1uDLh0J4R0ETmYeRFtQAI2qcSAMC/VW1+xBb+o/IJ5VMyJhGKc4RsmyWE0wG4kOuwfIcCP+XV0clw==
+  dependencies:
+    flat "^5.0.2"
+    uuid "^10.0.0"
+
 "@langchain/textsplitters@>=0.0.0 <0.2.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@langchain/textsplitters/-/textsplitters-0.1.0.tgz#f37620992192df09ecda3dfbd545b36a6bcbae46"
@@ -535,6 +543,11 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.9.0.tgz#d03eba68273dc0f7509e2a3d5cba21eae10379fe"
   integrity sha512-3giAOQvZiH5F9bMlMiv8+GSPMeqg0dbaeo58/0SlA9sxSqZhnUtxzX9/2FzyhS9sWQf5S0GJE0AKBrFqjpeYcg==
 
+"@pinecone-database/pinecone@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@pinecone-database/pinecone/-/pinecone-5.1.1.tgz#cc66ae873dcd76f2947ac72bc16a8f75e0bba684"
+  integrity sha512-2JwnY28qb2AQi3fLlBfiXhV6e4ZEF0/0HNLdoFWoSPcty6Eu7+354M8mo/Hj0Hi7y3TCDkSCXq2dgmbcDSmCFQ==
+
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
@@ -556,6 +569,20 @@
   integrity sha512-G+KcpzXHq24iH0uGG/pF8LyzpFJYGD4RfLjCIBfGdSLXvjLHST31RUiRVrupIBMvIppMgSzQ6l66iAxl03tdlg==
   dependencies:
     "@radix-ui/react-primitive" "2.0.2"
+
+"@radix-ui/react-checkbox@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-checkbox/-/react-checkbox-1.1.4.tgz#d7f5cb0a82ca6bb4eb717b74e9b2b0cc73ecf7a0"
+  integrity sha512-wP0CPAHq+P5I4INKe3hJrIa1WoNqqrejzW+zoU0rOvo1b9gDEJJFl2rYfO1PYJUQCc2H1WZxIJmyv9BS8i5fLw==
+  dependencies:
+    "@radix-ui/primitive" "1.1.1"
+    "@radix-ui/react-compose-refs" "1.1.1"
+    "@radix-ui/react-context" "1.1.1"
+    "@radix-ui/react-presence" "1.1.2"
+    "@radix-ui/react-primitive" "2.0.2"
+    "@radix-ui/react-use-controllable-state" "1.1.0"
+    "@radix-ui/react-use-previous" "1.1.0"
+    "@radix-ui/react-use-size" "1.1.0"
 
 "@radix-ui/react-collection@1.1.2":
   version "1.1.2"

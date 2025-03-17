@@ -1,9 +1,8 @@
-import { parsePdf } from '@/lib/resumeParsing';
 import { promises as fs } from 'fs'; // To save the file temporarily
 import { v4 as uuidv4 } from 'uuid'; // To gen
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
 import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
-import { ChatOpenAI, OpenAIEmbeddings } from '@langchain/openai';
+import { OpenAIEmbeddings } from '@langchain/openai';
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { Document } from "@langchain/core/documents";
 import { NextResponse } from 'next/server';
@@ -54,7 +53,7 @@ export async function POST(req: Request) {
 
         const embeddings = new OpenAIEmbeddings({
             model: "text-embedding-3-large",
-            apiKey: ""
+            apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY
         });
 
 

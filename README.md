@@ -149,3 +149,34 @@ This feature extracts structured data from uploaded resume PDFs.
 ## Streaming
 
 LangChain's streaming concept enhances user experience by progressively displaying outputs from large language models (LLMs) as they are generated. Instead of waiting for a complete response, users can see intermediate results in real-time, reducing perceived latency and improving responsiveness
+
+## AI Resume Matcher
+
+### Key Features:
+
+- Overall Match Score: A percentage score indicating how well the resume matches the job description.
+
+- Keyword Extraction: Identifies and highlights important and repeated keywords from the job description.
+
+- Detailed Matching Insights: Provides a breakdown of how each section of the resume matches the job description, including match percentages and relevant content snippets.
+
+### How It Works:
+
+- File Upload: Users upload their resume in PDF format.
+
+- Job Description Input: Users paste the job description they are targeting.
+
+- Processing: The tool uses LangChain and OpenAI embeddings to process the resume and job description.
+
+- Analysis: It calculates the match score, extracts keywords, and provides detailed matching insights.
+
+- Output: The results are displayed in a user-friendly interface, showing the overall score, keywords, and detailed matching sections.
+
+
+<div align="center">
+  <img src="demo/demo_5.png" width="800" alt="Workflow Diagram"/>
+</div>
+
+<div align="center">
+  <img src="demo/demo_7.png" width="800" alt="Workflow Diagram"/>
+</div>
