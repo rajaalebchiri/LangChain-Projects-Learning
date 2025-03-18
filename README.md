@@ -6,7 +6,7 @@ Building LLM APP with js and openai
 
 projects are under ai-rag-app
 
-![alt text](demo/preview.png)
+![alt text](demo/demo_8.png)
 
 ---
 
@@ -180,3 +180,39 @@ LangChain's streaming concept enhances user experience by progressively displayi
 <div align="center">
   <img src="demo/demo_7.png" width="800" alt="Workflow Diagram"/>
 </div>
+
+## 🚀 AI-Powered Prompt Generator  
+
+Introducing our latest feature: **AI-Powered Prompt Generator**, designed to help users craft high-quality AI prompts effortlessly. Built using insights from **LearnPrompting.org** and **PromptWarrior.com**, this tool applies advanced prompt engineering techniques to enhance AI interactions.  
+
+### ✨ Key Features  
+
+- **Structured Prompting:** Define goals, tone, role, and output format.  
+- **Multiple Techniques:** Supports Zero-Shot, Few-Shot, and Role Prompting.  
+- **AI-Powered Optimization:** Uses OpenAI embeddings for smarter prompt suggestions.  
+- **Vector Search Integration:** Stores and retrieves prompts using Pinecone for efficiency.  
+- **User-Friendly Interface:** Simple and intuitive design for seamless prompt creation.  
+
+### 🔍 How It Works  
+
+1. **Enter Your Goal** – Define what you want the AI to accomplish.  
+2. **Set Parameters** – Choose the tone, role, and desired output format.  
+3. **Apply Techniques** – Utilize different prompting strategies (Zero-Shot, Few-Shot, etc.).  
+4. **Generate & Optimize** – The AI refines your prompt using embeddings and vector search.  
+5. **Use Your Prompt** – Copy and paste the optimized prompt for your AI interactions.  
+
+This feature simplifies prompt engineering, making it accessible for beginners and powerful for advanced users. 🚀  
+
+
+<div align="center">
+  <img src="demo/demo_9.png" width="800" alt="prompts"/>
+</div>
+
+<div align="center">
+  <img src="demo/demo_10.png" width="800" alt="prompts"/>
+</div>
+
+<div align="center">
+  <img src="demo/demo_11.png" width="800" alt="prompts"/>
+</div>
+

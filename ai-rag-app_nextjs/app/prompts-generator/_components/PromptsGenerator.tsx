@@ -18,6 +18,7 @@ const PromptsGenerator = () => {
   });
 
   const [result, setResult] = useState({
+    title: "",
     prompt: "",
     details: "",
     techniques: [] as string[],
@@ -35,14 +36,17 @@ const PromptsGenerator = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        //setResult(data);
+        setResult(data?.answer);
+        setResult({
+          title: data?.answer?.title,
+          prompt: data?.answer?.prompt,
+          details: data?.answer?.details,
+          techniques: data?.answer?.techniques,
+        });
       });
-    setResult({
-      prompt: formData.context,
-      details: formData.goal,
-      techniques: formData.techniques,
-    });
+   
   };
+  console.log(result)
   return (
     <div className="max-w-4xl mx-auto w-full">
       <PromptForm formData={formData} setformData={setFormData} />

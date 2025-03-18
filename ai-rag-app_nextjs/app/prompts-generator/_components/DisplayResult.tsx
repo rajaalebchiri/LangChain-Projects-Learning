@@ -3,6 +3,7 @@ import React from "react";
 
 type Props = {
   result: {
+    title: string;
     prompt: string;
     details: string;
     techniques: string[];
@@ -13,8 +14,12 @@ const DisplayResult = (props: Props) => {
   return (
     <div className="p-4 mb-20 mt-10 flex flex-col gap-4 border-gray-500 border rounded-lg">
       <div>
+        <h3 className="text-xl font-semibold mb-2">{props.result.title}</h3>
+      </div>
+
+      <div>
         <h3 className="text-lg font-semibold mb-2">Generated Prompt:</h3>
-        <Textarea readOnly value={props.result.details} />
+        <Textarea readOnly value={props.result.prompt} />
       </div>
 
       <div>
